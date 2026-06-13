@@ -998,7 +998,7 @@ async function submitOrder() {
     } else {
       const errText = await res.text();
       console.error('Supabase error:', res.status, errText);
-      if (SUPABASE_URL === 'YOUR_SUPABASE_URL') {
+      if (SUPABASE_URL === 'https://akxndukqojjprospgyyl.supabase.co') {
         showMsg('⚙️ Supabase URL set nahi hai — setup guide dekho neeche.', '#C0392B', '#FFF5F5', '#C0392B');
       } else {
         showMsg('❌ Error aaya. WhatsApp karo: +91 80111 43929', '#C0392B', '#FFF5F5', '#C0392B');
