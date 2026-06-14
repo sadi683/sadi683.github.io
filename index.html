@@ -439,7 +439,7 @@ footer {
     <li><a href="#how">How It Works</a></li>
     <li><a href="#order">Order</a></li>
   </ul>
-  <a href="#order" class="nav-order">Subscribe Now</a>
+  <a href="#plans" class="nav-order">Subscribe Now</a>
 </nav>
 
 <!-- FREE DELIVERY BANNER -->
@@ -829,7 +829,7 @@ Subscribe — ₹4,499/mo
       <br>
       <div class="info-row">
         <div class="info-icon">📍</div>
-        <div><div class="info-label">Delivery Zone</div><div class="info-val">All LPU Hostels · Phagwara PGs & Flats · Lovely Enclave · Uni Villa & nearby areas</div></div>
+        <div><div class="info-label">Delivery Zone</div><div class="info-val">All LPU Hostels · Phagwara PGs & Flats · 15KM RNGE OF LPU · & nearby areas</div></div>
       </div>
       <div class="info-row">
         <div class="info-icon">⏰</div>
@@ -852,8 +852,8 @@ Subscribe — ₹4,499/mo
     <div class="order-form">
       <div class="form-title">🍛 Book Your Tiffin</div>
       <div class="frow">
-        <div class="fg"><label>Your Name</label><input id="f-name" type="text" placeholder="Rahul Kumar"></div>
-        <div class="fg"><label>WhatsApp Number</label><input id="f-phone" type="tel" placeholder="+91 98765 43210"></div>
+        <div class="fg"><label>Your Name</label><input id="f-name" type="text" placeholder="YOUR NAME"></div>
+        <div class="fg"><label>WhatsApp Number</label><input id="f-phone" type="tel" placeholder=" YOUR NUMBER"></div>
       </div>
       <div class="fg"><label>Hostel / PG Address</label><input id="f-address" type="text" placeholder="Hostel name, room no., block — ya PG address"></div>
       <div class="frow">
@@ -878,8 +878,8 @@ Subscribe — ₹4,499/mo
         <div class="fg">
           <label>Meal Timing</label>
           <select id="f-timing">
-            <option>Lunch Only (12–1 PM)</option>
-            <option>Dinner Only (7–8 PM)</option>
+            <option>Lunch Only (12–4 PM)</option>
+            <option>Dinner Only (7–10PM)</option>
             <option>Lunch + Dinner</option>
             <option>Breakfast + Lunch + Dinner</option>
           </select>
@@ -914,7 +914,7 @@ Subscribe — ₹4,499/mo
         <li><a href="#menu">Weekly Menu</a></li>
         <li><a href="#how">How It Works</a></li>
         <li><a href="#order">Subscribe Now</a></li>
-        <li><a href="https://rasooi.godaddysites.com" target="_blank">Our Website</a></li>
+        <li><a href="https://rasooi.shop" target="_blank">Our Website</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -923,7 +923,7 @@ Subscribe — ₹4,499/mo
         <li><a href="https://wa.me/918011439293" target="_blank">📱 +91 8011 439293</a></li>
         <li><a href="https://wa.me/919707889516" target="_blank">📱 +91 97078 89516</a></li>
         <li><a href="mailto:support@rasooi.shop">📧 support@rasooi.shop</a></li>
-        <li><a href="https://rasooi.godaddysites.com" target="_blank">🌐 rasooi.shop</a></li>
+        <li><a href="https://rasooi.shop" target="_blank">🌐 rasooi.shop</a></li>
         <li><a href="#">📸 Instagram</a></li>
       </ul>
     </div>
@@ -994,7 +994,7 @@ async function submitOrder() {
     });
 
     if (res.ok || res.status === 201) {
-      showMsg('✅ Order request bhej diya! Hum 1 ghante mein WhatsApp karenge 🙏', '#1E8449', '#F0FFF4', '#1E8449');
+      showMsg('✅ Order request sent ! we will  get back toyou  shortly🙏', '#1E8449', '#F0FFF4', '#1E8449');
       btn.textContent = '✅ Submitted!';
       btn.style.background = '#1E8449';
       ['f-name','f-phone','f-address','f-notes','f-date'].forEach(id => {
