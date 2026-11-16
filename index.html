@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasooi | Fooding Made Easy - Homestyle Tiffins (Law Gate, Green Valley & Hardaspur)</title>
+    <meta name="description" content="Rasooi - Fooding Made Easy. Authentic homestyle tiffin meal delivery for off-campus students in Law Gate, Green Valley, Hardaspur & nearby PGs. 1-Time Daily Plan: Veg @ ₹2,599 & Non-Veg @ ₹2,999/month (Choose Lunch OR Dinner). WhatsApp: 9707889516.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍲</text></svg>">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#ea580c',
+                            amber: '#f59e0b',
+                            navy: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-orange-600 via-amber-600 to-orange-700 text-white text-xs py-2 px-4 font-semibold text-center flex items-center justify-center gap-2">
+        <span class="bg-white/20 text-white text-[10px] uppercase font-black px-2 py-0.5 rounded-full">Rasooi • Fooding Made Easy</span>
+        <span>🔥 <strong>1-Time A Day Plan:</strong> Pure Veg @ <strong>₹2,599/mo</strong> | Non-Veg @ <strong>₹2,999/mo</strong> (Lunch OR Dinner) • Free Doorstep Delivery in <strong>Law Gate, Green Valley & Hardaspur</strong>! WhatsApp: <strong>9707889516</strong></span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            
+            <!-- Logo & Brand -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 via-amber-500 to-orange-600 flex items-center justify-center text-white text-xl shadow-lg shadow-orange-500/25 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-2xl font-black tracking-tight text-slate-900">Rasooi</span>
+                        <span class="text-[10px] font-black uppercase bg-orange-100 text-orange-800 px-1.5 py-0.5 rounded-md">Off-Campus PG Tiffins</span>
+                    </div>
+                    <p class="text-[11px] font-bold text-orange-600 tracking-wide">
+                        Fooding Made Easy • Law Gate | Green Valley | Hardaspur
+                    </p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-600">
+                <a href="#plansSection" class="hover:text-orange-600 text-orange-600 transition">1-Time Monthly Plans</a>
+                <a href="#weeklySection" class="hover:text-orange-600 transition">7-Day Menu Schedule</a>
+                <a href="#coverageSection" class="hover:text-orange-600 transition">Delivery Areas</a>
+                <a href="#subscriptionsSection" class="hover:text-orange-600 transition">All Passes</a>
+                <a href="#trackingSection" class="hover:text-orange-600 transition">Track Tiffin</a>
+                <a href="#faqSection" class="hover:text-orange-600 transition">FAQs</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/919707889516?text=Hi%20Rasooi,%20I%20stay%20in%20Law%20Gate%20/%20Green%20Valley%20/%20Hardaspur%20and%20want%20to%20order%20tiffin" target="_blank" class="hidden sm:flex items-center gap-2 px-3.5 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200/80 rounded-xl text-xs font-bold transition">
+                    <i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i>
+                    <span>WhatsApp 9707889516</span>
+                </a>
+
+                <button onclick="app.openModal('cartDrawer')" class="relative px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-black shadow-md flex items-center gap-2.5 transition">
+                    <i class="fa-solid fa-bag-shopping text-sm text-orange-400"></i>
+                    <span>Bag</span>
+                    <span class="cart-count-badge hidden bg-orange-500 text-white text-[10px] font-black w-5 h-5 rounded-full flex items-center justify-center -ml-1">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="relative pt-12 pb-20 overflow-hidden bg-white border-b border-slate-100">
+            <div class="absolute inset-0 bg-pattern-dots opacity-40"></div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-orange-400/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200/80 text-orange-800 text-xs font-bold shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                            <span>Doorstep Delivery Active in Law Gate • Green Valley • Hardaspur</span>
+                        </div>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.12]">
+                            Ghar Jaisa <span class="text-gradient-food">Khana</span>.
+                            <br class="hidden sm:inline">Fooding Made Easy at Your PG Door.
+                        </h1>
+
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl">
+                            <strong>Rasooi</strong> delivers authentic homestyle meals made with 100% whole wheat phulkas and pure desi ghee directly to student flats and PGs in <strong>Law Gate, Green Valley, and Hardaspur</strong>. No need to cook or deal with disappointing PG mess food. Choose our flexible <strong>1-time a day monthly plan</strong> for Lunch or Dinner!
+                        </p>
+
+                        <div class="p-3 bg-amber-50 border border-amber-200 rounded-2xl text-xs text-amber-900 flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-amber-600 text-sm shrink-0"></i>
+                            <span><strong>Off-Campus Specialized:</strong> We deliver to all PGs and Flats outside LPU campus (Law Gate, Green Valley & Hardaspur).</span>
+                        </div>
+
+                        <!-- FEATURED 1-TIME DAILY PLAN HIGHLIGHT CARDS -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            
+                            <!-- Veg Plan Card -->
+                            <div class="bg-gradient-to-br from-emerald-50 to-green-50/50 border-2 border-emerald-500/80 rounded-2xl p-5 shadow-sm relative overflow-hidden flex flex-col justify-between">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-emerald-600 text-white font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                                        1-Time A Day • Pure Veg
+                                    </span>
+                                    <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="text-xs text-slate-500 font-bold">Lunch OR Dinner (30 Days)</div>
+                                    <div class="text-3xl font-black text-slate-900 mt-0.5">₹2,599 <span class="text-xs font-bold text-slate-500">/ mo</span></div>
+                                    <div class="text-[11px] font-black text-emerald-700 mt-0.5">Just ₹86/meal • Save ₹701</div>
+                                    <p class="text-[11px] text-slate-600 mt-2 leading-tight"><strong>Weekly Rotation:</strong> 2 Din Paneer 🧀 + 5 Din Daily Market Sabzis (Aloo Gobi, Bhindi, Mix Veg), Dal, 4 Phulkas, Rice & Sunday Sweet.</p>
+                                </div>
+                                <div class="mt-4 space-y-1.5">
+                                    <a href="https://rzp.io/rzp/ALIkEfoh" target="_blank" onclick="app.selectHeroPlan('veg')" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl text-xs font-black uppercase tracking-wider transition shadow-md shadow-emerald-600/20 flex items-center justify-center gap-1.5">
+                                        <span>Select Veg (₹2,599)</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                    </a>
+                                    <button onclick="app.selectHeroPlan('veg')" class="w-full text-center text-[10px] text-slate-500 hover:text-slate-800 font-bold transition">
+                                        Choose Lunch/Dinner or PG Doorstep Drop
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Non-Veg Plan Card -->
+                            <div class="bg-gradient-to-br from-red-50 to-amber-50/50 border-2 border-red-500/80 rounded-2xl p-5 shadow-sm relative overflow-hidden flex flex-col justify-between">
+                                <div class="flex items-center justify-between">
+                                    <span class="bg-red-600 text-white font-black text-[10px] px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+                                        1-Time A Day • Non-Veg
+                                    </span>
+                                    <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="text-xs text-slate-500 font-bold">Lunch OR Dinner (30 Days)</div>
+                                    <div class="text-3xl font-black text-slate-900 mt-0.5">₹2,999 <span class="text-xs font-bold text-slate-500">/ mo</span></div>
+                                    <div class="text-[11px] font-black text-red-700 mt-0.5">Just ₹99/meal • Save ₹901</div>
+                                    <p class="text-[11px] text-slate-600 mt-2 leading-tight"><strong>Weekly Rotation:</strong> 3 Din Chicken 🍗 • 1 Din Anda 🥚 • 1 Din Fish ya Paneer 🐟🧀 • Pure Veg on other days. 4 Phulkas, Rice & Salad.</p>
+                                </div>
+                                <div class="mt-4 space-y-1.5">
+                                    <a href="https://rzp.io/rzp/5T62orL" target="_blank" onclick="app.selectHeroPlan('nonveg')" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-black uppercase tracking-wider transition shadow-md shadow-red-600/20 flex items-center justify-center gap-1.5">
+                                        <span>Select Non-Veg (₹2,999)</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                    </a>
+                                    <button onclick="app.selectHeroPlan('nonveg')" class="w-full text-center text-[10px] text-slate-500 hover:text-slate-800 font-bold transition">
+                                        Choose Lunch/Dinner or PG Doorstep Drop
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Key Pillars Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-100">
+                            <div>
+                                <div class="text-2xl font-black text-slate-900">Direct PG</div>
+                                <div class="text-xs text-slate-500 font-semibold mt-0.5">Doorstep Drop</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-black text-orange-600">100%</div>
+                                <div class="text-xs text-slate-500 font-semibold mt-0.5">Whole Wheat & Desi Ghee</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-black text-amber-600">4 Pauses</div>
+                                <div class="text-xs text-slate-500 font-semibold mt-0.5">Vacation Rollover Policy</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-black text-emerald-600">₹0 Fee</div>
+                                <div class="text-xs text-slate-500 font-semibold mt-0.5">Law Gate & Green Valley</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Hero Visual Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-emerald-500/10 p-4 sm:p-6 rounded-[2.5rem] border border-orange-200/50 shadow-2xl relative">
+                            
+                            <!-- Floating Student Badge -->
+                            <div class="absolute -top-4 -left-4 bg-white border border-slate-100 p-3.5 rounded-2xl shadow-xl flex items-center gap-3 z-20 animate-float">
+                                <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-lg">
+                                    <i class="fa-solid fa-house-user"></i>
+                                </div>
+                                <div>
+                                    <div class="text-[10px] uppercase tracking-wider font-extrabold text-orange-600">PG Students Choice</div>
+                                    <div class="text-xs font-black text-slate-900">Law Gate & Green Valley</div>
+                                </div>
+                            </div>
+
+                            <!-- Showcase Hero Images -->
+                            <div class="space-y-4">
+                                <div class="relative rounded-3xl overflow-hidden shadow-lg h-60 sm:h-68">
+                                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=800&q=80" alt="Rasooi Tiffin" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-5">
+                                        <div class="text-white">
+                                            <div class="text-xs font-bold text-amber-300">Rasooi: Fooding Made Easy</div>
+                                            <div class="text-base font-black">4 Phulkas + Dal Makhani + Mix Veg + Jeera Rice</div>
+                                            <div class="text-xs text-white/80 mt-0.5">Delivered directly to Law Gate, Green Valley & Hardaspur PGs</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="relative rounded-2xl overflow-hidden shadow h-32">
+                                        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=400&q=80" alt="Punjabi Non Veg Thali" class="w-full h-full object-cover">
+                                        <div class="absolute inset-0 bg-black/50 flex items-end p-3">
+                                            <span class="text-white text-xs font-extrabold leading-tight">Desi Chicken & Egg Thalis</span>
+                                        </div>
+                                    </div>
+                                    <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-4 text-white flex flex-col justify-between">
+                                        <div class="text-xs font-bold text-emerald-400">WhatsApp Orders</div>
+                                        <div class="text-lg font-black leading-tight">+91 97078 89516</div>
+                                        <div class="text-[10px] text-slate-400">Instant response & meal booking</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DELIVERY AREAS SECTION -->
+        <section id="coverageSection" class="py-12 bg-slate-100 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-8">
+                    <span class="text-xs font-black uppercase tracking-wider text-orange-600 bg-orange-200/60 px-3 py-1 rounded-full">
+                        Exclusive Off-Campus Coverage
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">Where Does Rasooi Deliver?</h2>
+                    <p class="text-xs text-slate-600 mt-1">We deliver right to your PG room, floor, or flat door across these off-campus areas:</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-sm">Law Gate Area</h4>
+                            <p class="text-xs text-slate-500 mt-1">Main Market, Khalsa Street, Near Gate 1, Streets 1 to 5 & all student PGs.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-sm">Green Valley</h4>
+                            <p class="text-xs text-slate-500 mt-1">PG Colony Block A, Block B, Main Road Flats & surrounding student homes.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-location-arrow"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-sm">Hardaspur Area</h4>
+                            <p class="text-xs text-slate-500 mt-1">Hardaspur Village PGs, Student Enclaves & GT Road Crossing flats.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold shrink-0">
+                            <i class="fa-solid fa-map-pin"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-sm">Nearby PG Hubs</h4>
+                            <p class="text-xs text-slate-500 mt-1">Maheru Village PGs, Deep Nagar & Chaheru Road off-campus student flats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1-TIME DAILY PLANS DEEP-DIVE SECTION -->
+        <section id="plansSection" class="py-16 sm:py-20 bg-gradient-to-b from-orange-50/50 via-white to-slate-50 border-b border-slate-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-black uppercase tracking-wider text-orange-600 bg-orange-100/80 px-3.5 py-1 rounded-full border border-orange-200">
+                        Rasooi • Fooding Made Easy
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-3">
+                        1-Time A Day Monthly Plans
+                    </h2>
+                    <p class="text-slate-600 text-sm mt-2">
+                        Get one complete, fresh meal every day for 30 days. Perfect whether you prefer hot <strong>Lunch</strong> (12:30–2:00 PM) after classes or fresh hot <strong>Dinner</strong> (8:00–9:00 PM) in your room.
+                    </p>
+
+                    <!-- First-time user refundable security notice -->
+                    <div class="mt-5 p-3.5 bg-amber-50 border border-amber-200/90 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-amber-950 text-left">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-xl bg-amber-200 text-amber-900 flex items-center justify-center font-bold text-sm shrink-0">
+                                <i class="fa-solid fa-box-open"></i>
+                            </div>
+                            <div>
+                                <span class="font-extrabold text-slate-900">First-Time User Tiffin Security Fee: ₹1,000</span>
+                                <span class="text-[10px] font-black uppercase bg-emerald-600 text-white px-2 py-0.5 rounded-full ml-1.5">100% Refundable</span>
+                                <div class="text-[11px] text-slate-600 mt-0.5">One-time deposit for insulated stainless-steel tiffin box set. 100% refunded when you conclude subscription & return boxes.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    
+                    <!-- Veg Card Detailed -->
+                    <div class="bg-white rounded-3xl border-2 border-emerald-500 shadow-xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden card-hover">
+                        <div class="absolute -right-8 -top-8 w-32 h-32 bg-emerald-500/10 rounded-full blur-xl"></div>
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <span class="bg-emerald-600 text-white font-black text-xs px-3.5 py-1 rounded-full uppercase tracking-wider">
+                                    Pure Veg Monthly Plan
+                                </span>
+                                <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">
+                                    Save ₹701
+                                </span>
+                            </div>
+
+                            <h3 class="text-2xl font-black text-slate-900 mt-4">1-Time Daily Pure Veg Plan</h3>
+                            <p class="text-xs text-slate-500 mt-1">30 Days • Choose Lunch (12:30-2:00 PM) OR Dinner (8:00-9:00 PM)</p>
+
+                            <div class="my-5 pb-5 border-b border-slate-100 flex items-baseline gap-2">
+                                <span class="text-4xl font-black text-slate-900">₹2,599</span>
+                                <span class="text-base text-slate-400 line-through">₹3,300</span>
+                                <span class="text-xs font-bold text-slate-500 ml-1">(Only ₹86 / meal)</span>
+                            </div>
+
+                            <div class="space-y-3 text-xs text-slate-700">
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>2 Din Paneer (Weekly):</strong> Shahi Kadhai Paneer (Wed) & Rich Paneer Butter Masala Feast (Sun).</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>5 Din Fresh Market Sabzis:</strong> Everyday homestyle seasonal vegetables (Aloo Gobi, Bhindi Masala, Mix Veg, Dum Aloo, Baingan Bharta, Lauki Kofta).</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>Complete Thali:</strong> 4 soft whole wheat phulkas with pure desi ghee, Dal (Tadka / Makhani / Rajma / Kadhi), Basmati Jeera rice, salad & pickle.</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>Timing Choice:</strong> Lunch (12:30–2:00 PM) OR Dinner (8:00–9:00 PM) with 4 vacation rollover pauses.</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>Sunday Bonus:</strong> Complimentary sweet dish (Gulab Jamun / Kheer / Halwa) every Sunday!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-5 border-t border-slate-100 space-y-2">
+                            <a href="https://rzp.io/rzp/ALIkEfoh" target="_blank" onclick="app.openPlanModal('sub-1time-veg')" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl font-black text-xs uppercase tracking-wider shadow-lg shadow-emerald-600/25 transition flex items-center justify-center gap-2">
+                                <span>Select Veg Plan (₹2,599)</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <button onclick="app.openPlanModal('sub-1time-veg')" class="w-full py-1 text-slate-500 hover:text-slate-800 text-[11px] font-bold text-center transition flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-sliders text-xs"></i>
+                                <span>Customize Meal Window (Lunch / Dinner) & PG Details</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Non-Veg Card Detailed -->
+                    <div class="bg-white rounded-3xl border-2 border-red-500 shadow-xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden card-hover">
+                        <div class="absolute -right-8 -top-8 w-32 h-32 bg-red-500/10 rounded-full blur-xl"></div>
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <span class="bg-red-600 text-white font-black text-xs px-3.5 py-1 rounded-full uppercase tracking-wider">
+                                    Non-Veg Delight Monthly Plan
+                                </span>
+                                <span class="text-xs font-bold text-red-700 bg-red-50 px-2.5 py-1 rounded-md">
+                                    Save ₹901
+                                </span>
+                            </div>
+
+                            <h3 class="text-2xl font-black text-slate-900 mt-4">1-Time Daily Non-Veg Plan</h3>
+                            <p class="text-xs text-slate-500 mt-1">30 Days • Choose Lunch (12:30-2:00 PM) OR Dinner (8:00-9:00 PM)</p>
+
+                            <div class="my-5 pb-5 border-b border-slate-100 flex items-baseline gap-2">
+                                <span class="text-4xl font-black text-slate-900">₹2,999</span>
+                                <span class="text-base text-slate-400 line-through">₹3,900</span>
+                                <span class="text-xs font-bold text-slate-500 ml-1">(Only ₹99 / meal)</span>
+                            </div>
+
+                            <div class="space-y-3 text-xs text-slate-700">
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-red-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>3 Din Chicken (Weekly):</strong> Desi Dhaba Chicken (Wed), Amritsari Tariwala Chicken (Fri) & Delhi Butter Chicken / Biryani Feast (Sun).</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-red-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>1 Din Anda (Weekly):</strong> Homestyle Punjabi Egg Curry Thali with 2 boiled eggs in spiced curry (Mon).</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-red-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>1 Din Fish ya Paneer (Weekly):</strong> Amritsari Fish Curry OR Rich Kadhai Paneer (your choice on Sat!).</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-red-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>Pure Veg / Fasting Days:</strong> Amritsari Rajma Chawal (Tue) & Matar Paneer / Pindi Chole (Thu).</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-red-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>Doorstep PG Delivery:</strong> Direct to your room/flat door in Law Gate, Green Valley & Hardaspur (8:00–9:00 PM for Dinner).</span>
+                                </div>
+                                <div class="flex items-start gap-2.5">
+                                    <i class="fa-solid fa-circle-check text-red-500 text-sm mt-0.5 shrink-0"></i>
+                                    <span><strong>Vacation Pause Guarantee:</strong> Up to 4 pauses per month with automatic rollover days via WhatsApp at 9707889516.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-5 border-t border-slate-100 space-y-2">
+                            <a href="https://rzp.io/rzp/5T62orL" target="_blank" onclick="app.openPlanModal('sub-1time-nonveg')" class="w-full py-3.5 bg-red-600 hover:bg-red-700 text-white rounded-2xl font-black text-xs uppercase tracking-wider shadow-lg shadow-red-600/25 transition flex items-center justify-center gap-2">
+                                <span>Select Non-Veg Plan (₹2,999)</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                            <button onclick="app.openPlanModal('sub-1time-nonveg')" class="w-full py-1 text-slate-500 hover:text-slate-800 text-[11px] font-bold text-center transition flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-sliders text-xs"></i>
+                                <span>Customize Meal Window (Lunch / Dinner) & PG Details</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 7-DAY DYNAMIC MENU SCHEDULE -->
+        <section id="weeklySection" class="py-16 bg-white border-y border-slate-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-xs font-black uppercase tracking-wider text-orange-600 bg-orange-50 px-3 py-1 rounded-full border border-orange-200/60">
+                        Never Get Bored
+                    </span>
+                    <h2 class="text-3xl font-black text-slate-900 tracking-tight mt-3">
+                        7-Day Rotating Menu Schedule
+                    </h2>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1">
+                        We rotate our subzis and gravies every day so your meals are consistently exciting throughout the semester!
+                    </p>
+
+                    <!-- Days Pill Bar -->
+                    <div class="flex items-center justify-center gap-2 mt-6 overflow-x-auto pb-2 scrollbar-none">
+                        <button onclick="app.renderWeeklyMenu('monday')" data-day="monday" class="day-pill px-4 py-2 rounded-xl text-xs font-black bg-orange-600 text-white shadow-sm transition">Mon</button>
+                        <button onclick="app.renderWeeklyMenu('tuesday')" data-day="tuesday" class="day-pill px-4 py-2 rounded-xl text-xs font-black bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">Tue</button>
+                        <button onclick="app.renderWeeklyMenu('wednesday')" data-day="wednesday" class="day-pill px-4 py-2 rounded-xl text-xs font-black bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">Wed</button>
+                        <button onclick="app.renderWeeklyMenu('thursday')" data-day="thursday" class="day-pill px-4 py-2 rounded-xl text-xs font-black bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">Thu</button>
+                        <button onclick="app.renderWeeklyMenu('friday')" data-day="friday" class="day-pill px-4 py-2 rounded-xl text-xs font-black bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">Fri</button>
+                        <button onclick="app.renderWeeklyMenu('saturday')" data-day="saturday" class="day-pill px-4 py-2 rounded-xl text-xs font-black bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">Sat</button>
+                        <button onclick="app.renderWeeklyMenu('sunday')" data-day="sunday" class="day-pill px-4 py-2 rounded-xl text-xs font-black bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition">Sun</button>
+                    </div>
+                </div>
+
+                <div id="weeklyScheduleContent" class="max-w-4xl mx-auto">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ALL SUBSCRIPTIONS (TRIALS & FULL BOARD) -->
+        <section id="subscriptionsSection" class="py-16 sm:py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-black uppercase tracking-wider text-orange-600 bg-orange-100 px-3 py-1 rounded-full border border-orange-200">
+                        Rasooi • Fooding Made Easy
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mt-3">
+                        Compare All Tiffin Passes
+                    </h2>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1">
+                        Choose between our 7-Day trial passes, 1-Time A Day monthly passes (Veg ₹2,599 / Non-Veg ₹2,999), or Full Board (Both Meals).
+                    </p>
+                </div>
+
+                <div id="subscriptionsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LIVE ORDER TRACKER SECTION -->
+        <section id="trackingSection" class="py-16 sm:py-24 bg-white border-t border-slate-200/80">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-10">
+                    <span class="text-xs font-black uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60">
+                        Real-Time Doorstep Tracking
+                    </span>
+                    <h2 class="text-3xl font-black text-slate-900 tracking-tight mt-3">
+                        Track Your PG Tiffin Delivery
+                    </h2>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1">
+                        Enter your Order ID to check cooking status, thermal packaging, or assigned rider location.
+                    </p>
+                </div>
+
+                <!-- Input search bar -->
+                <div class="bg-white p-2.5 sm:p-3 rounded-2xl border border-slate-200/80 shadow-md flex items-center gap-2 max-w-xl mx-auto mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-400 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <input type="text" id="trackOrderInput" placeholder="Enter Order ID (e.g. RASOOI-7821)" class="w-full text-sm font-semibold text-slate-800 placeholder:text-slate-400 focus:outline-none uppercase">
+                    <button onclick="window.trackOrderManual()" class="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-black shrink-0 transition">
+                        Track
+                    </button>
+                </div>
+
+                <!-- Quick Demo Buttons -->
+                <div class="flex items-center justify-center gap-2 text-xs text-slate-500 mb-8">
+                    <span>Try sample active orders:</span>
+                    <button onclick="document.getElementById('trackOrderInput').value='RASOOI-7821'; window.trackOrderManual();" class="underline font-bold text-orange-600 hover:text-orange-700">RASOOI-7821 (Law Gate PG)</button>
+                    <span>•</span>
+                    <button onclick="document.getElementById('trackOrderInput').value='RASOOI-6349'; window.trackOrderManual();" class="underline font-bold text-red-600 hover:text-red-700">RASOOI-6349 (Green Valley Flat)</button>
+                </div>
+
+                <!-- Tracking Results Box -->
+                <div id="trackingResultsContainer">
+                    <!-- Populated by tracker.js -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- STUDENT TESTIMONIALS -->
+        <section class="py-16 sm:py-24 bg-slate-50 border-t border-slate-200/80">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-xs font-black uppercase tracking-wider text-orange-600">Off-Campus Student Community</span>
+                    <h2 class="text-3xl font-black text-slate-900 tracking-tight mt-1">Loved by Students Across Law Gate & Green Valley</h2>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1">
+                        Read what residents living in Law Gate, Green Valley, and Hardaspur say about Rasooi homestyle food.
+                    </p>
+                </div>
+
+                <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Populated dynamically -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQS SECTION -->
+        <section id="faqSection" class="py-16 sm:py-24 bg-white border-t border-slate-200/80">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-12">
+                    <span class="text-xs font-black uppercase tracking-wider text-orange-600">Got Questions?</span>
+                    <h2 class="text-3xl font-black text-slate-900 tracking-tight mt-1">Frequently Asked Questions</h2>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1">
+                        Everything you need to know about Rasooi 1-time plans, off-campus deliveries, meal pauses, and hygiene.
+                    </p>
+                </div>
+
+                <div id="faqsAccordion" class="space-y-3">
+                    <!-- Populated dynamically -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA BANNER -->
+        <section class="py-16 bg-gradient-to-r from-orange-600 via-amber-600 to-orange-700 text-white text-center relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+                <span class="bg-black/20 text-white text-xs uppercase font-extrabold px-3 py-1 rounded-full">
+                    Rasooi • Fooding Made Easy
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight">
+                    Start Eating Nutritious, Homestyle Food at Your PG
+                </h2>
+                <p class="text-white/90 text-sm max-w-xl mx-auto">
+                    Say goodbye to boring PG mess food. Subscribe to our 1-time daily plan: <strong>Veg @ ₹2,599</strong> or <strong>Non-Veg @ ₹2,999</strong> with free doorstep PG delivery in Law Gate, Green Valley & Hardaspur.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <button onclick="app.selectHeroPlan('veg')" class="px-8 py-3.5 bg-white text-orange-700 hover:bg-slate-50 rounded-2xl font-black text-sm shadow-xl transition">
+                        Enroll in Veg Plan (₹2,599)
+                    </button>
+                    <a href="https://wa.me/919707889516?text=Hi%20Rasooi,%20I%20want%20to%20subscribe%20to%20the%20tiffin%20plan%20for%20my%20PG" target="_blank" class="px-8 py-3.5 bg-slate-900 text-white hover:bg-slate-800 rounded-2xl font-black text-sm shadow-xl transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp 9707889516
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 text-xs py-14 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-xl bg-orange-500 text-white flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-utensils text-xs"></i>
+                        </div>
+                        <span class="text-lg font-black text-white">Rasooi</span>
+                    </div>
+                    <p class="text-orange-400 font-bold text-xs -mt-2">Fooding Made Easy</p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Dedicated homestyle tiffin meal ecosystem for off-campus students living in Law Gate, Green Valley, Hardaspur and nearby PGs & flats.
+                    </p>
+                    <div class="text-[11px] text-slate-500">
+                        Kitchen Active 7 days a week: 11:30 AM - 11:30 PM
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-extrabold uppercase tracking-wider text-xs mb-3">Delivery Zones</h4>
+                    <ul class="space-y-2">
+                        <li>Law Gate (Main Market, Khalsa St, Gate 1)</li>
+                        <li>Green Valley (Colony Blocks A & B)</li>
+                        <li>Hardaspur (Village & Student PGs)</li>
+                        <li>Maheru Village PGs</li>
+                        <li>Deep Nagar & Chaheru Road Flats</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-extrabold uppercase tracking-wider text-xs mb-3">Popular Plans</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#plansSection" class="hover:text-white transition">1-Time Veg Plan (₹2,599/mo)</a></li>
+                        <li><a href="#plansSection" class="hover:text-white transition">1-Time Non-Veg Plan (₹2,999/mo)</a></li>
+                        <li><a href="#weeklySection" class="hover:text-white transition">7-Day Menu Schedule</a></li>
+                        <li><a href="#subscriptionsSection" class="hover:text-white transition">All Subscription Passes</a></li>
+                        <li><a href="#trackingSection" class="hover:text-white transition">Live Tiffin Tracking</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h4 class="text-white font-extrabold uppercase tracking-wider text-xs mb-3">Rasooi Kitchen Hub</h4>
+                    <p class="leading-relaxed">
+                        <i class="fa-solid fa-store text-orange-500 mr-1.5"></i> Shop 14, Main Market, Law Gate, Phagwara, Punjab
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-phone text-emerald-400 mr-1.5"></i> +91 97078 89516
+                    </p>
+                    <p>
+                        <i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> WhatsApp: 9707889516
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+                <p>© 2026 Rasooi — Fooding Made Easy. Law Gate, Green Valley & Hardaspur.</p>
+                <div class="flex items-center gap-4">
+                    <span>Pure Desi Ghee</span>
+                    <span>•</span>
+                    <span>100% Whole Wheat Phulkas</span>
+                    <span>•</span>
+                    <span>FSSAI Certified</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======================================================== -->
+    <!-- MODALS & DRAWERS -->
+    <!-- ======================================================== -->
+
+    <!-- Plan Selection Modal (Lunch OR Dinner Timing) -->
+    <div id="planModal" class="hidden fixed inset-0 z-50 overflow-y-auto">
+        <div class="min-h-screen px-4 text-center flex items-center justify-center">
+            <div class="fixed inset-0 modal-backdrop transition-opacity" onclick="app.closeModal('planModal')"></div>
+            
+            <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 text-left shadow-2xl relative z-10 my-8 animate-fadeIn">
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+                    <span class="text-xs font-black uppercase text-orange-600">Rasooi • Fooding Made Easy</span>
+                    <button onclick="app.closeModal('planModal')" class="w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition">
+                        <i class="fa-solid fa-xmark text-xs"></i>
+                    </button>
+                </div>
+                <div id="planModalContent">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Slide-Out Drawer -->
+    <div id="cartDrawer" class="hidden fixed inset-0 z-50 overflow-hidden">
+        <div class="absolute inset-0 modal-backdrop transition-opacity" onclick="app.closeModal('cartDrawer')"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+                
+                <!-- Drawer Header -->
+                <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-utensils text-orange-600 text-lg"></i>
+                        <h3 class="font-extrabold text-slate-900 text-base">Your Rasooi Bag</h3>
+                    </div>
+                    <button onclick="app.closeModal('cartDrawer')" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition">
+                        <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- Empty State -->
+                <div id="emptyCartNotice" class="hidden p-10 text-center my-auto">
+                    <div class="w-16 h-16 rounded-full bg-orange-50 text-orange-500 flex items-center justify-center text-2xl mx-auto mb-3">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h4 class="font-black text-slate-800 text-base">Your Bag is Empty</h4>
+                    <p class="text-xs text-slate-500 mt-1">Select a monthly subscription pass (Veg ₹2,599 or Non-Veg ₹2,999) to begin enjoying homestyle meals.</p>
+                    <button onclick="app.closeModal('cartDrawer'); app.selectHeroPlan('veg')" class="mt-5 px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white rounded-xl text-xs font-bold transition">
+                        View 1-Time Plans
+                    </button>
+                </div>
+
+                <!-- Items Container -->
+                <div id="cartDrawerItems" class="p-6 space-y-3 overflow-y-auto flex-1">
+                    <!-- Populated dynamically -->
+                </div>
+
+                <!-- Drawer Footer (Coupon & Checkout) -->
+                <div id="cartDrawerFooter" class="p-6 border-t border-slate-100 bg-slate-50/50 space-y-4">
+                    
+                    <!-- Coupon code input -->
+                    <div class="flex items-center gap-2">
+                        <input type="text" id="cartCouponInput" placeholder="Promo code (e.g. RASOOI10 or TIFFIN150)" class="w-full text-xs uppercase px-3 py-2.5 rounded-xl border border-slate-200 focus:border-orange-500 focus:outline-none">
+                        <button onclick="app.applyCoupon(document.getElementById('cartCouponInput').value)" class="px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold shrink-0 transition">
+                            Apply
+                        </button>
+                    </div>
+
+                    <!-- First-time Subscriber Tiffin Box Security Toggle -->
+                    <div class="p-3 bg-amber-50/80 border border-amber-200/90 rounded-2xl flex items-start gap-2.5">
+                        <input type="checkbox" id="firstTimeUserCheckbox" checked onchange="app.toggleSecurityDeposit(this.checked)" class="mt-0.5 w-4 h-4 text-orange-600 rounded border-slate-300 focus:ring-orange-500 cursor-pointer">
+                        <label for="firstTimeUserCheckbox" class="text-xs cursor-pointer select-none">
+                            <span class="font-extrabold text-amber-950 flex items-center gap-1.5">
+                                <span>First-Time User Tiffin Security Fee (+₹1,000)</span>
+                                <span class="text-[9px] font-black uppercase bg-emerald-600 text-white px-1.5 py-0.2 rounded">100% Refundable</span>
+                            </span>
+                            <span class="block text-[11px] text-amber-800 mt-0.5 leading-snug">
+                                One-time deposit for stainless-steel insulated tiffin containers. 100% refunded when you return the tiffin boxes. (Uncheck if renewing).
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Breakdown -->
+                    <div class="space-y-1.5 text-xs text-slate-600 border-t border-slate-100 pt-3">
+                        <div class="flex justify-between">
+                            <span>Monthly Plan:</span>
+                            <span id="cartSubtotalValue" class="font-bold text-slate-800">₹0</span>
+                        </div>
+                        <div id="cartSecurityFeeRow" class="flex justify-between text-amber-900">
+                            <span class="flex items-center gap-1">
+                                <span>Tiffin Security Fee (New User):</span>
+                                <span class="text-[9px] font-black uppercase text-emerald-700 bg-emerald-100 px-1 py-0.2 rounded">Refundable</span>
+                            </span>
+                            <span id="cartSecurityFeeValue" class="font-bold">+₹1,000</span>
+                        </div>
+                        <div id="cartDiscountRow" class="flex justify-between text-emerald-600 hidden">
+                            <span>Student Discount:</span>
+                            <span id="cartDiscountValue" class="font-bold">-₹0</span>
+                        </div>
+                        <div class="flex justify-between text-slate-500">
+                            <span>Doorstep PG Delivery:</span>
+                            <span class="font-bold text-emerald-600">FREE</span>
+                        </div>
+                        <div class="flex justify-between text-sm font-black text-slate-900 pt-2 border-t border-slate-200">
+                            <span>Total Payable:</span>
+                            <span id="cartTotalValue" class="text-base text-orange-600">₹0</span>
+                        </div>
+                    </div>
+
+                    <!-- Checkout Button -->
+                    <button onclick="app.openCheckout()" class="w-full py-3.5 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 text-white rounded-2xl font-black text-xs uppercase tracking-wider shadow-lg shadow-orange-500/25 transition">
+                        Proceed to Doorstep Delivery <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="hidden fixed inset-0 z-50 overflow-y-auto">
+        <div class="min-h-screen px-4 text-center flex items-center justify-center">
+            <div class="fixed inset-0 modal-backdrop transition-opacity" onclick="app.closeModal('checkoutModal')"></div>
+            
+            <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 text-left shadow-2xl relative z-10 my-8 animate-fadeIn">
+                <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                    <div>
+                        <span class="text-[10px] font-black uppercase tracking-wider text-orange-600">Rasooi Delivery Details</span>
+                        <h3 class="font-black text-slate-900 text-lg">Off-Campus PG / Flat Delivery</h3>
+                    </div>
+                    <button onclick="app.closeModal('checkoutModal')" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition">
+                        <i class="fa-solid fa-xmark text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- 1st Time Deposit Notice -->
+                <div id="checkoutDepositNotice" class="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-2xl flex items-center justify-between text-xs text-amber-950">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-box text-amber-600"></i>
+                        <span>Includes <strong>₹1,000 Tiffin Security Fee</strong> (1st-time user deposit)</span>
+                    </div>
+                    <span class="text-[10px] font-black uppercase bg-emerald-600 text-white px-2 py-0.5 rounded-full">100% Refundable</span>
+                </div>
+
+                <form onsubmit="app.processOrder(event)" class="mt-5 space-y-4 text-xs">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1">Your Full Name *</label>
+                            <input type="text" id="checkoutName" required placeholder="e.g. Amanpreet Singh" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-orange-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1">WhatsApp Mobile *</label>
+                            <input type="tel" id="checkoutPhone" required placeholder="e.g. 9876543210" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-orange-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Select Delivery Location (Law Gate / Green Valley / Hardaspur) *</label>
+                        <select id="checkoutHostelSelect" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-orange-500 focus:outline-none">
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1">PG Name & Room / Flat Number *</label>
+                            <input type="text" id="checkoutRoom" required placeholder="e.g. Royal PG, Room 204 or Flat 3B" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-orange-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block font-bold text-slate-700 mb-1">Preferred Delivery Slot *</label>
+                            <select id="checkoutTimeSlot" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-orange-500 focus:outline-none">
+                                <!-- Populated dynamically -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block font-bold text-slate-700 mb-1">Dietary / Landmark Instructions</label>
+                        <input type="text" id="checkoutNotes" placeholder="e.g. Near Royal Bakery / Call when reaching street" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-orange-500 focus:outline-none">
+                    </div>
+
+                    <!-- Payment Mode -->
+                    <div class="pt-3 border-t border-slate-100">
+                        <label class="block font-bold text-slate-700 mb-2">Payment Mode</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <label class="flex items-center gap-2 p-3 rounded-xl border-2 border-blue-500/80 bg-blue-50/40 cursor-pointer hover:bg-blue-50 transition">
+                                <input type="radio" name="checkoutPayment" value="Razorpay Online Link" checked class="text-blue-600">
+                                <div>
+                                    <div class="font-bold text-slate-900 text-xs flex items-center gap-1">
+                                        <span>Razorpay Online</span>
+                                        <span class="text-[9px] font-black uppercase bg-blue-600 text-white px-1.5 py-0.2 rounded">Fast</span>
+                                    </div>
+                                    <div class="text-[10px] text-slate-500">Cards / UPI / Netbanking</div>
+                                </div>
+                            </label>
+
+                            <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 transition">
+                                <input type="radio" name="checkoutPayment" value="UPI / Online QR" class="text-orange-500">
+                                <div>
+                                    <div class="font-bold text-slate-900 text-xs">UPI / QR Code</div>
+                                    <div class="text-[10px] text-slate-500">GPay, PhonePe to 9707889516</div>
+                                </div>
+                            </label>
+
+                            <label class="flex items-center gap-2 p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 transition">
+                                <input type="radio" name="checkoutPayment" value="Cash on Delivery" class="text-orange-500">
+                                <div>
+                                    <div class="font-bold text-slate-900 text-xs">Cash on Doorstep</div>
+                                    <div class="text-[10px] text-slate-500">Pay on 1st meal delivery</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <div class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Total Amount</div>
+                            <div id="checkoutFinalTotal" class="text-2xl font-black text-slate-900">₹0</div>
+                        </div>
+
+                        <button type="submit" class="px-6 py-3 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 text-white rounded-xl font-black text-xs uppercase tracking-wider shadow-lg shadow-orange-500/25 transition">
+                            Confirm Tiffin Dispatch
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div id="orderSuccessModal" class="hidden fixed inset-0 z-50 overflow-y-auto">
+        <div class="min-h-screen px-4 text-center flex items-center justify-center">
+            <div class="fixed inset-0 modal-backdrop transition-opacity" onclick="app.closeModal('orderSuccessModal')"></div>
+            
+            <div class="bg-white rounded-3xl max-w-md w-full p-6 text-left shadow-2xl relative z-10 my-8 animate-fadeIn">
+                <div id="orderSuccessContent">
+                    <!-- Populated dynamically by app.js -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Element -->
+    <div id="appToast" class="hidden fixed top-5 right-5 z-50 px-5 py-3 rounded-2xl shadow-2xl font-bold text-xs flex items-center gap-2 text-white transition-all transform duration-300">
+        <i class="fa-solid fa-bell text-amber-400"></i>
+        <span id="appToastText">Notification message</span>
+    </div>
+
+    <!-- Floating Mobile Sticky Cart Bar -->
+    <div id="mobileCartBar" class="hidden sm:hidden mobile-sticky-bottom p-3 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-2xl">
+        <div class="flex items-center justify-between gap-3">
+            <div>
+                <span id="mobileBarCount" class="text-xs font-bold text-slate-500">0 items</span>
+                <div id="mobileBarTotal" class="text-base font-black text-slate-900">₹0</div>
+            </div>
+            <button onclick="app.openModal('cartDrawer')" class="px-5 py-2.5 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-black text-xs rounded-xl shadow-md flex items-center gap-2">
+                <span>View Bag</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/tracker.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+[
+  {
+    "isFirstTimeUser": true,
+    "total": 3599,
+    "id": "RASOOI-TEST-1000",
+    "itemsSummary": "1x 1-Time Daily Pure Veg Monthly Plan (Dinner 8-9 PM)",
+    "slot": "Dinner (8:00 PM - 9:00 PM)",
+    "securityDeposit": 1000,
+    "customerName": "Amanpreet Test",
+    "room": "PG/Flat: Room 304",
+    "location": "Law Gate - Khalsa Street PG",
+    "paymentMethod": "Razorpay Online (Official Link)",
+    "phone": "9707889516"
+  },
+  {
+    "id": "RASOOI-8075",
+    "createdAt": "2026-11-16T17:40:06.969Z",
+    "type": "subscription",
+    "itemsSummary": "1x 1-Time Daily Non-Veg Delight Monthly Plan (Dinner (8:00 PM - 9:00 PM))",
+    "location": "Law Gate - Main Market",
+    "room": "PG/Flat: i6ut",
+    "customerName": "ukuguty",
+    "phone": "jgutgutg",
+    "total": 2999,
+    "paymentMethod": "UPI / Online QR",
+    "slot": "Dinner: 8:00 PM - 9:00 PM",
+    "notes": "",
+    "statusStage": 0,
+    "statusText": "Subscription Enrolled & Acknowledged",
+    "rider": {
+      "name": "Maninder Singh (Rasooi Dedicated Partner)",
+      "phone": "+91 97078 89516",
+      "eta": "Slot Scheduled: Dinner: 8:00 PM - 9:00 PM",
+      "bike": "Rasooi Delivery Fleet"
+    }
+  },
+  {
+    "id": "RASOOI-7821",
+    "createdAt": "2026-11-16T20:45:00.000Z",
+    "type": "tiffin",
+    "brand": "Rasooi",
+    "itemsSummary": "1-Time Daily Pure Veg Monthly Plan (\u20b92,599) - Dinner Slot",
+    "location": "Law Gate - Khalsa Street PG",
+    "room": "Room 204, Floor 2",
+    "customerName": "Harshit Verma",
+    "phone": "9876543210",
+    "total": 2599,
+    "paymentMethod": "UPI Online",
+    "statusStage": 3,
+    "statusText": "Out for Delivery to Law Gate PG",
+    "rider": {
+      "name": "Sukhwinder (Rasooi Delivery Rider)",
+      "phone": "+91 97078 89516",
+      "eta": "8 Mins",
+      "bike": "Hero Splendor PB-08-AB"
+    }
+  },
+  {
+    "id": "RASOOI-6349",
+    "createdAt": "2026-11-16T19:30:00.000Z",
+    "type": "tiffin",
+    "brand": "Rasooi",
+    "itemsSummary": "1-Time Daily Non-Veg Delight Monthly Plan (\u20b92,999) - Dinner Slot",
+    "location": "Green Valley - Block B Flats",
+    "room": "Flat 302",
+    "customerName": "Rohit Deshmukh",
+    "phone": "9812345678",
+    "total": 2999,
+    "paymentMethod": "UPI Online",
+    "statusStage": 2,
+    "statusText": "Packed in Insulated Thermal Box",
+    "rider": {
+      "name": "Aman (Rasooi Delivery Fleet)",
+      "phone": "+91 97078 89516",
+      "eta": "Scheduled: 8:15 PM Doorstep Drop",
+      "bike": "Electric Delivery Van"
+    }
+  }
+]
